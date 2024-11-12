@@ -6,12 +6,15 @@
 /*   By: tkubanyc <tkubanyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 16:19:44 by tkubanyc          #+#    #+#             */
-/*   Updated: 2024/11/09 16:21:27 by tkubanyc         ###   ########.fr       */
+/*   Updated: 2024/11/12 16:27:28 by tkubanyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 
+/*--------------------------------------*/
+/*  Create a Zombie on the heap memory  */
+/*--------------------------------------*/
 Zombie*	newZombie( std::string name ) {
 
 	return new Zombie( name );
