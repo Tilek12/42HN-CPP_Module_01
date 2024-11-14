@@ -6,7 +6,7 @@
 /*   By: tkubanyc <tkubanyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 14:00:46 by tkubanyc          #+#    #+#             */
-/*   Updated: 2024/11/14 20:38:25 by tkubanyc         ###   ########.fr       */
+/*   Updated: 2024/11/14 21:22:28 by tkubanyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 #include "Weapon.hpp"
 #include <string>
 
+/*---------------------------*/
+/*  HumanA Class definition  */
+/*---------------------------*/
 class	HumanA {
 
 private:

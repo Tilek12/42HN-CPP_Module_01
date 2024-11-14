@@ -6,7 +6,7 @@
 /*   By: tkubanyc <tkubanyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 14:18:23 by tkubanyc          #+#    #+#             */
-/*   Updated: 2024/11/13 15:46:25 by tkubanyc         ###   ########.fr       */
+/*   Updated: 2024/11/14 21:20:29 by tkubanyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 #include "Weapon.hpp"
 #include <string>
 
+/*---------------------------*/
+/*  HumanB Class definition  */
+/*---------------------------*/
 class	HumanB {
 
 private:
