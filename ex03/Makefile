@@ -4,7 +4,7 @@ VIOLET	= \033[0;35m
 RESET	= \033[0m
 
 # Variables
-NAME = zombie
+NAME = violence
 SRC = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 OBJ = $(SRC:.cpp=.o)
 CXX = c++
