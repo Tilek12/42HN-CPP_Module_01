@@ -5,7 +5,7 @@ RESET	= \033[0m
 
 # Variables
 NAME = replace
-SRC = main.cpp
+SRC = main.cpp replace.cpp print.cpp
 OBJ = $(SRC:.cpp=.o)
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++17
