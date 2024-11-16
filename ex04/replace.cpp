@@ -6,12 +6,15 @@
 /*   By: tkubanyc <tkubanyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 20:20:27 by tkubanyc          #+#    #+#             */
-/*   Updated: 2024/11/16 11:32:30 by tkubanyc         ###   ########.fr       */
+/*   Updated: 2024/11/16 11:40:30 by tkubanyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "replace.hpp"
 
+/*-------------------------*/
+/*  Get content from file  */
+/*-------------------------*/
 std::string	readContent( const std::string& fileName ) {
 
 	std::ifstream	inputFile( fileName );
@@ -27,6 +30,9 @@ std::string	readContent( const std::string& fileName ) {
 
 }
 
+/*-----------------------------*/
+/*  Replace string in content  */
+/*-----------------------------*/
 std::string	makeReplacement( const std::string& content,
 							const std::string& s1,
 							const std::string& s2 ) {
@@ -49,6 +55,9 @@ std::string	makeReplacement( const std::string& content,
 
 }
 
+/*-------------------------*/
+/*  Write content to file  */
+/*-------------------------*/
 bool	writeContent( const std::string& fileName,
 					const std::string& content ) {
 
@@ -64,6 +73,9 @@ bool	writeContent( const std::string& fileName,
 
 }
 
+/*---------------------------*/
+/*  Define replace function  */
+/*---------------------------*/
 void	replace( const std::string& fileName,
 				const std::string& s1,
 				const std::string& s2 ) {
