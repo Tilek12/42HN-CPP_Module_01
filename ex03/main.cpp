@@ -6,7 +6,7 @@
 /*   By: tkubanyc <tkubanyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 15:54:37 by tkubanyc          #+#    #+#             */
-/*   Updated: 2024/11/14 21:20:46 by tkubanyc         ###   ########.fr       */
+/*   Updated: 2024/11/16 17:46:02 by tkubanyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 #include "HumanA.hpp"
 #include "HumanB.hpp"
 
+/*-----------------*/
+/*  Main function  */
+/*-----------------*/
 int	main()
 {
 	{

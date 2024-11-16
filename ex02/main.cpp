@@ -6,7 +6,7 @@
 /*   By: tkubanyc <tkubanyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 16:58:21 by tkubanyc          #+#    #+#             */
-/*   Updated: 2024/11/13 13:03:53 by tkubanyc         ###   ########.fr       */
+/*   Updated: 2024/11/16 17:45:46 by tkubanyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,9 @@ const std::string PURPLE	= "\033[0;35m";
 const std::string CYAN		= "\033[0;36m";
 const std::string RESET		= "\033[0m";
 
+/*-----------------*/
+/*  Main function  */
+/*-----------------*/
 int	main( void ) {
 
 	std::string		string = "HI THIS IS BRAIN";

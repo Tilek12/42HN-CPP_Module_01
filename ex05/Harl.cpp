@@ -6,43 +6,65 @@
 /*   By: tkubanyc <tkubanyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 14:10:25 by tkubanyc          #+#    #+#             */
-/*   Updated: 2024/11/16 14:59:50 by tkubanyc         ###   ########.fr       */
+/*   Updated: 2024/11/16 17:44:39 by tkubanyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Harl.hpp"
-#include <iostream>
 
+/*-------------------------*/
+/*  Define debug function  */
+/*-------------------------*/
 void	Harl::debug( void ) {
 
-	std::cout << "I love having extra bacon for my "
+	std::cout << YELLOW
+			<< "I love having extra bacon for my "
 				"7XL-double-cheese-triple-pickle-specialketchup burger. "
-				"I really do!\n\n";
+				"I really do!\n\n"
+			<< RESET;
 
 }
 
+/*------------------------*/
+/*  Define info function  */
+/*------------------------*/
 void	Harl::info( void ) {
 
-	std::cout << "I cannot believe adding extra bacon costs more money. "
+	std::cout << YELLOW
+			<< "I cannot believe adding extra bacon costs more money. "
 				"You didn’t put enough bacon in my burger! If you did, "
-				"I wouldn’t be asking for more!\n\n";
+				"I wouldn’t be asking for more!\n\n"
+			<< RESET;
 
 }
 
+/*---------------------------*/
+/*  Define warning function  */
+/*---------------------------*/
 void	Harl::warning( void ) {
 
-	std::cout << "I think I deserve to have some extra bacon for free. "
+	std::cout << YELLOW
+			<< "I think I deserve to have some extra bacon for free. "
 				"I’ve been coming for years whereas you started working "
-				"here since last month.\n\n";
+				"here since last month.\n\n"
+			<< RESET;
 
 }
 
+/*-------------------------*/
+/*  Define error function  */
+/*-------------------------*/
 void	Harl::error( void ) {
 
-	std::cout << "This is unacceptable! I want to speak to the manager now.\n\n";
+	std::cout << YELLOW
+			<< "This is unacceptable! I want to speak to the manager now.\n\n"
+			<< RESET;
 
 }
 
+/*----------------------------*/
+/*  Define complain function  */
+/*----------------------------*/
 void	Harl::complain( std::string level ) {
 
 	void	( Harl::*complaints[] )() = { &Harl::debug,
@@ -59,6 +81,8 @@ void	Harl::complain( std::string level ) {
 		}
 	}
 
-	std::cout << "Incorrect level: " << level << std::endl;
+	std::cout << RED
+			<< "Incorrect level: " << level
+			<< RESET << std::endl << std::endl;
 
 }
