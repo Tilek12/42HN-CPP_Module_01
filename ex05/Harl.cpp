@@ -6,7 +6,7 @@
 /*   By: tkubanyc <tkubanyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 14:10:25 by tkubanyc          #+#    #+#             */
-/*   Updated: 2024/11/16 17:44:39 by tkubanyc         ###   ########.fr       */
+/*   Updated: 2024/11/17 18:37:36 by tkubanyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	Harl::debug( void ) {
 
 	std::cout << YELLOW
 			<< "I love having extra bacon for my "
-				"7XL-double-cheese-triple-pickle-specialketchup burger. "
+				"7XL-double-cheese-triple-pickle-specialketchup burger.\n"
 				"I really do!\n\n"
 			<< RESET;
 
@@ -31,9 +31,9 @@ void	Harl::debug( void ) {
 void	Harl::info( void ) {
 
 	std::cout << YELLOW
-			<< "I cannot believe adding extra bacon costs more money. "
-				"You didn’t put enough bacon in my burger! If you did, "
-				"I wouldn’t be asking for more!\n\n"
+			<< "I cannot believe adding extra bacon costs more money.\n"
+				"You didn’t put enough bacon in my burger!\n"
+				"If you did, I wouldn’t be asking for more!\n\n"
 			<< RESET;
 
 }
@@ -44,7 +44,7 @@ void	Harl::info( void ) {
 void	Harl::warning( void ) {
 
 	std::cout << YELLOW
-			<< "I think I deserve to have some extra bacon for free. "
+			<< "I think I deserve to have some extra bacon for free.\n"
 				"I’ve been coming for years whereas you started working "
 				"here since last month.\n\n"
 			<< RESET;
@@ -67,7 +67,7 @@ void	Harl::error( void ) {
 /*----------------------------*/
 void	Harl::complain( std::string level ) {
 
-	void	( Harl::*complaints[] )() = { &Harl::debug,
+	void	( Harl::*complaints[] )( void ) = { &Harl::debug,
 											&Harl::info,
 											&Harl::warning,
 											&Harl::error };

@@ -6,7 +6,7 @@
 /*   By: tkubanyc <tkubanyc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 15:57:55 by tkubanyc          #+#    #+#             */
-/*   Updated: 2024/11/17 17:25:16 by tkubanyc         ###   ########.fr       */
+/*   Updated: 2024/11/17 18:53:50 by tkubanyc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,14 +44,17 @@ class	Harl {
 
 private:
 
-	void	debug( void );
-	void	info( void );
-	void	warning( void );
-	void	error( void );
+	enum		LogLevel { DEBUG, INFO, WARNING, ERROR, UNKNOWN };
+	void		debug( void );
+	void		info( void );
+	void		warning( void );
+	void		error( void );
+	void		unknown( void );
 
 public:
 
-	void	complain( std::string level );
+	void		complain( const std::string& level );
+	LogLevel	getLogLevel( const std::string& level );
 
 };
 
