@@ -127,7 +127,8 @@ int main()
 
     HumanA bob("Bob", club);
     bob.attack();
-    club.setType("some other type of club"); bob.attack();
+    club.setType("some other type of club");
+    bob.attack();
   }
   {
     Weapon club = Weapon("crude spiked club");
@@ -135,11 +136,125 @@ int main()
     HumanB jim("Jim");
     jim.setWeapon(club);
     jim.attack();
+    club.setType("some other type of club");
+    jim.attack();
   }
 
   return 0;
 }
 
 ```
-club.setType("some other type of club"); jim.attack();
 Don’t forget to check for memory leaks.
+
+---------------------------------------------
+
+## :green_circle: **Exercise 04: Sed is for losers**
+
+**Turn-in directory :**   | ex04/
+|:---|:---|
+**Files to turn in :**    | Makefile, main.cpp, *.cpp, *.{h, hpp} 
+**Forbidden functions :** | std::string::replace
+
+Create a program that takes three parameters in the following order: 
+a filename and two strings, **s1** and **s2**.
+
+It will open the file **<filename>** and copies its content into a new file **<filename>.replace**, 
+replacing every occurrence of **s1** with **s2**.
+
+Using C file manipulation functions is forbidden and will be considered cheating. 
+All the member functions of the class **std::string** are allowed, except **replace**. Use them wisely!
+
+Of course, handle unexpected inputs and errors. You have to create and turn in your own tests 
+to ensure your program works as expected.
+
+---------------------------------------------
+
+## :green_circle: **Exercise 05: Harl 2.0**
+
+**Turn-in directory :**   | ex05/
+|:---|:---|
+**Files to turn in :**    | Makefile, main.cpp, Harl.{h, hpp}, Harl.cpp 
+**Forbidden functions :** | None
+
+Do you know Harl? We all do, do we? In case you don’t, find below the kind of comments Harl makes. 
+They are classified by levels:
+- **"DEBUG"** level: Debug messages contain contextual information. They are mostly used for problem diagnosis.
+
+Example: *"I love having extra bacon for my 7XL-double-cheese-triple-pickle-special-ketchup burger. I really do!"*
+
+- **"INFO"** level: These messages contain extensive information. They are helpful for tracing program execution
+in a production environment.
+
+Example: *"I cannot believe adding extra bacon costs more money. You didn’t put enough bacon in my burger!
+If you did, I wouldn’t be asking for more!"*
+
+- **"WARNING"** level: Warning messages indicate a potential issue in the system. However, it can be handled or ignored.
+
+Example: *"I think I deserve to have some extra bacon for free. I’ve been coming for years whereas
+you started working here since last month."*
+
+- **"ERROR"** level: These messages indicate an unrecoverable error has occurred.
+This is usually a critical issue that requires manual intervention.
+
+Example: *"This is unacceptable! I want to speak to the manager now."*
+
+You are going to automate Harl. It won’t be difficult since it always says the same things. 
+You have to create a **Harl** class with the following private member functions:
+- void debug( void );
+- void info( void );
+- void warning( void ); • void error( void );
+
+**Harl** also has a public member function that calls the four member functions above depending 
+on the level passed as parameter:
+
+    void    complain( std::string level );
+    
+The goal of this exercise is to use **pointers to member functions**. This is not a suggestion. 
+Harl has to complain without using a forest of if/else if/else. It doesn’t think twice!
+
+Create and turn in tests to show that Harl complains a lot. You can use the examples of comments listed above 
+in the subject or choose to use comments of your own.
+
+---------------------------------------------
+
+## :star: **Exercise 06: Harl filter**
+
+**Turn-in directory :**   | ex06/
+|:---|:---|
+**Files to turn in :**    | Makefile, main.cpp, Harl.{h, hpp}, Harl.cpp
+**Forbidden functions :** | None
+
+Sometimes you don’t want to pay attention to everything Harl says. Implement a system to filter what 
+Harl says depending on the log levels you want to listen to.
+
+Create a program that takes as parameter one of the four levels. It will display all messages 
+from this level and above. For example:
+
+```
+$> ./harlFilter "WARNING"
+[ WARNING ]
+I think I deserve to have some extra bacon for free.
+I've been coming for years whereas you started working here since last month.
+[ ERROR ]
+This is unacceptable, I want to speak to the manager now.
+$> ./harlFilter "I am not sure how tired I am today..."
+[ Probably complaining about insignificant problems ]
+```
+
+Although there are several ways to deal with Harl, one of the most effective is to SWITCH it off.
+
+Give the name **harlFilter** to your executable.
+
+You must use, and maybe discover, the switch statement in this exercise.
+
+
+
+
+
+
+
+
+
+
+
+
